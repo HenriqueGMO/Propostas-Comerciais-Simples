@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta</title>
+</head>
+<body>
+    
+    <style>
+        body {
+          background: linear-gradient(to top left, #6E1AF2, #E2637D);
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        
+        .login-container {
+          background-color: rgba(0, 0, 0, 0.1);
+          border: 2px solid;
+          max-width: 350px;
+          padding: 30px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-container h2 {
+          text-align: center;
+          margin-bottom: 30px;
+          color: #000;
+          font-size: 24px;
+          letter-spacing: 1px;
+        }
+        
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+          width: 330px;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          font-size: 16px;
+        }
+        
+        .login-container input[type="submit"] {
+          background-color: #E2637D;
+          color: #fff;
+          border: none;
+          padding: 12px 20px;
+          cursor: pointer;
+          border-radius: 3px;
+          width: 351px;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+        }
+        
+        .login-container input[type="submit"]:hover {
+          background-color: #C2516D;
+        }
+        
+        .login-container p {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 14px;
+          color: #999;
+        }
+        
+        .login-container p a {
+          color: #000;
+          text-decoration: none;
+        }
+        
+        .login-container p a:hover {
+          text-decoration: underline;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="login-container">
+        <h2>Criar Conta</h2>
+        <form>
+          <input type="text" placeholder="Nome de usuário" required>
+          <input type="password" placeholder="Senha" required>
+          <input type="password" placeholder="Digite a senha novamente" required> 
+          <input type="submit" value="Criar Conta" formaction="/pagina-inicial.html">
+        </form>
+        <p>Já tem uma conta? <a href="/login.html">Faça login</a></p>
+      </div>
+
+</body>
+</html>

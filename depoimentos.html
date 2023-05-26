@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <title>Depoimentos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .geral {
+            font-family: Open sans;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        nav {
+            background: #FFFFFF;
+            box-shadow: none;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #333;
+            float: right;
+            text-decoration: none;
+            display: block;
+            padding: 14px 16px;
+        }
+
+        nav a:hover {
+            transition: 0.5s;
+            background: linear-gradient(to left, #6E1AF2, #E2637D);
+            font-family: "Quicksand", sans-serif;
+            color: #e4e4e4
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        nav .logo {
+            color: #333;
+            float: left;
+            display: block;
+            padding: 14px 16px;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+            font-size: 30px;
+            padding-left: 0px;
+        }
+
+        .depoimentos {
+            padding: 40px 0;
+            background: linear-gradient(to left, #6E1AF2, #E2637D);
+            color: white;
+            text-align: center;
+            height: 600px;
+            border-top: 2px solid #E2637D;
+            border-left: 2px solid #E2637D;
+            border-bottom: 2px solid #6E1AF2;
+            border-right: 2px solid #6E1AF2;
+            border-radius: 45px;
+        }
+
+        .inner {
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        .border {
+            width: 193px;
+            height: 4px;
+            background: linear-gradient(to right, #ae2d68, purple);
+            margin: 8px auto;
+            border-radius: 90px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .col {
+            flex: 33.33%;
+            max-width: 33.33%;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        .depoimento {
+            position: relative;
+            padding-left: 10px;
+            padding-top: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 25px;
+            border-top: 2px solid #E2637D;
+            border-left: 2px solid #E2637D;
+            border-bottom: 2px solid #6E1AF2;
+            border-right: 2px solid #6E1AF2;
+        }
+
+        .depoimento img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .name {
+            font-size: 20px;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        .stars {
+            color: #6ab04c;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 960px) {
+            .col {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Logo</div>
+            <a href="/pagina-inicial.html">Home</a>
+            <a href="/contato.html">Contato</a>
+            <a href="/sobre-nos.html">Sobre Nós</a>
+            <a href="/FAQ.html">FAQ</a>
+        </nav>
+    </div>
+
+    <div class="geral">
+        <div class="depoimentos">
+            <div class="inner">
+                <h1>Depoimentos</h1>
+                <div class="border"></div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="depoimento">
+                            <img src="https://planodenegocios.blogfolha.uol.com.br/files/2019/08/Luciano-Amado.png" alt="">
+                            <div class="name">Pedro Magalhães Oliveira</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+
+                            <p>Eu recomendo a Duofy, porque eles entregaram meu website em menos de 1 mês!</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="depoimento">
+                            <img src="https://s3.us-east-1.amazonaws.com/fi-hatchbox-production-uploads/users/2232751.jpeg" alt="">
+                            <div class="name">Roberto Moreira</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+
+                            <p>Adorei o website feito pela Duofy! Recomendo, preço super acessível, pessoal gente boa!</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="depoimento">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXYfCPk1dLVWsOsajiS6jMMLtZc9qyqS_pyNQHERrE3sBmA80OPvKnWiHUjQil18yyXFM&usqp=CAU" alt="">
+                            <div class="name">João Vitor dos Santos</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+
+                            <p>Estou sem palavras para a Duofy! Rápida entrega, ótimos preços, negociação perfeita!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

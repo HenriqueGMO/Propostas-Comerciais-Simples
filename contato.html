@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="/contato.css">
+    <script src="https://kit.fontawesome.com/bb1a576acc.js" crossorigin="anonymous"></script>
+    <script src="/lugares.js"></script>
+    
+</head>
+<body>
+<br>
+
+    <div class="geral">
+        <div class="container">
+            <nav>
+                <div class="logo">Logo</div>
+                <a href="/pagina-inicial.html">Home</a>
+                <a href="/contato.html">Contato</a>
+                <a href="/sobre-nos.html">Sobre Nós</a>
+                <a href="/FAQ.html">FAQ</a>
+            </nav>
+<h1 style="background-color: #171717; color: #FFFFFF; font-family: Open sans; font-size: 35px; position: fixed; width: 100%; left: 0; padding-left: 20px; height: 70px; display: flex; justify-content: left; align-items: center; margin-top: 23px;">Contato</h1>
+<br><br><br><br>
+
+            <h2 style="margin-left: 390px;">
+                Preencha com suas informações
+            </h2>
+            <script src="https://smtjps.com/v3/smtp.js"></script>
+
+            <div class="formulario" style="background-color: #FFFFFF; display: flex; justify-content: center; align-items: center; height: 400px; width: 700px; margin-left: 380px; border-radius: 50px;">
+              <form  onsubmit="sendEmail(); reset(); return false;">
+                <br>
+                <input type="text" name="Nome:" id="nome" required placeholder="Nome"  style="color: black; border-radius: 10px; border: none; background-color: lightgray; height: 35px; width: 300px; padding-left: 13px; font-size: 15px;">
+                <br><br>
+                <br>
+                <input type="email" name="email" id="email" required placeholder="Email" style="color: black; border-radius: 10px; border: none; background-color: lightgray; height: 35px; width: 300px; padding-left: 13px; font-size: 15px;">
+                <br><br>
+                <br>
+                <input type="text" name="numero" id="numero" required placeholder="Número" style="color: black; border-radius: 10px; border: none; background-color: lightgray; height: 35px; width: 300px; padding-left: 13px; font-size: 15px;">
+                <br><br><br>
+                <textarea name="Mensagem" placeholder="Mensagem" required style="margin-left: 0px; color: black; border-radius: 10px; border: none; background-color: lightgray; height: 35px; width: 300px; padding-left: 13px; font-size: 15px; display: flex; justify-content: center; align-items: center; padding-top: 13px; resize: none;"></textarea>
+                <br><br>
+                <button style="height: 40px; width: 100px; border-radius: 25px; border: none; background: #E2637D; color: #FFFFFF; font-family: Open sans; font-size: 18px; font-weight: bold; margin-left: 103px;" type="submit"><a href="" style="text-decoration: none; color: #FFFFFF;" onclick="sendEmail()">Enviar</a></button>
+            </form>
+            <br>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function submitForm() {
+        var name = document.getElementById('Nome').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('numero').value;
+  
+        var data = {
+          name: Nome,
+          email: email,
+          numero: number
+        };
+        axios.post('********/api/endpoint', data)
+          .then(function (response) {
+            console.log(response);
+            alert('Dados enviados com sucesso!');
+            document.getElementById('form').reset(); 
+          })
+          .catch(function (error) {
+            console.log(error);
+
+            alert('Ocorreu um erro ao enviar os dados.');
+          });
+      }
+    </script>
+
+</body>
+</html>

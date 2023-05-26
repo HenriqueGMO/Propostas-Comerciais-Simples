@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Tabela</title>
+    <link rel="stylesheet" href="/cadastro-tabela/cadastro-tabela.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Logo</div>
+        <a href="/pagina-inicial.html">Home</a>
+        <a href="/contato.html">Contato</a>
+        <a href="/sobre-nos.html">Sobre Nós</a>
+        <a href="/FAQ.html">FAQ</a>
+    </nav>
+
+    <h1 style="background-color: #171717; color: #FFFFFF; font-family: Open sans; font-size: 35px;  max-width: 100%; left: 0; padding-left: 20px; height: 70px; display: flex; justify-content: left; align-items: center; margin-top: 50px;">Cadastro de Tabela</h1>
+    <div class="geral">
+        <h2 style="font-family: Open sans; margin-left: 100px; color: #171717;">Tabela de preços</h2>
+        <br><br>
+        <div class="tabela" style="font-family: sans-serif; background-color: rgba(1, 1, 1, 0.4);">
+          <span style="color: white; font-family: Open sans">Produto:</span>
+          <input type="text" name="produto" id="produto" style="width: 330px; background: white; border: 1px solid;  border-radius: 8px;">
+          <br><br><br>
+          <span style="color: white; font-family: Open sans">Descrição:</span>
+          <input type="text" name="descricao_produto" id="descricao_produto" style="width: 315px; background: white; border: 1px solid; border-radius: 8px;">
+          <br><br><br>
+          <span style="color: white; font-family: Open sans">Valor de Custo:</span>
+          <input type="number" name="valor_custo" id="valor_custo" style="width: 280px; background: white; border: 1px solid;  border-radius: 8px;">
+          <br><br><br>
+          <span style="color: white; font-family: Open sans">Valor de Venda Sugerido:</span>
+          <input type="number" name="valor_sugerido" id="valor_sugerido" style="width: 200px; background: white; border: 1px solid;  border-radius: 8px;">
+          <br><br><br>
+          <span style="color: white; font-family: Open sans;">Valor de Venda 2:</span>
+          <input type="number" name="valor_venda2" id="valor_venda2" style="width: 260px; background: white; border: 1px solid;  border-radius: 8px;">
+          <br><br><br>
+          <span style="color: white; font-family: Open sans;">Valor de Venda 3:</span>
+          <input type="number" name="valor_venda3" id="valor_venda3" style="width: 260px; background: white; border: 1px solid;  border-radius: 8px;">
+        </div>
+            <button onclick="gerarNumero()" style="font-family: Open sans; font-weight: bold; margin-left: 260px; font-size: 15px;">Número da Proposta</button>
+            <p id="numeroGerado" style="font-family: sans-serif; margin-left: 230px; margin-top: 10px;"></p>
+<br><br>
+       <div class="inputs_final" style="margin-left: 100px;">
+        <span style="color: white; font-family: Open sans">Nome do Cliente:</span>
+        <br>
+        <input type="text" name="nome" id="nome" style="width: 200px; border: 1px solid black; border-radius: 8px; background: rgba(0, 0, 0, 0.2); font-size: 20px; font-family: Open sans; font-weight: bold;">
+
+        <br><br>
+        <span style="color: white; font-family: Open sans">Data da Proposta:</span>
+        <br>
+        <input type="date" name="data_proposta" id="data_proposta" style="width: 202px; border: 1px solid black; border-radius: 8px; background: rgba(0, 0, 0, 0.2); font-size: 20px; color: #171717; font-family: Open sans; font-weight: BOLD;">
+
+       </div>
+
+       <button style="cursor: pointer;" onclick="cadastrarTabela()">Cadastrar Tabela</button>
+
+        <script>
+            function gerarNumero() {
+                var numeroRandom = Math.floor(Math.random() * 2000) + 1;
+                document.getElementById("numeroGerado").innerHTML = "Número da Proposta: " + numeroRandom;
+            }
+        </script>
+
+        <footer style="background-color: #171717; font-family: sans-serif; color: #FFFFFF; margin-top: 55px; padding: 10px; height: 32px; display: flex; justify-content: left; align-items: center;">
+            <span>Total:</span>
+            <span id="total">0</span>
+        </footer>
+
+        <script>
+            function atualizarTotal() {
+                var valor_custo = parseFloat(document.getElementById("valor_custo").value) || 0;
+                var valor_sugerido = parseFloat(document.getElementById("valor_sugerido").value) || 0;
+                var valor_venda2 = parseFloat(document.getElementById("valor_venda2").value) || 0;
+                var valor_venda3 = parseFloat(document.getElementById("valor_venda3").value) || 0;
+
+                var total = valor_custo + valor_sugerido + valor_venda2 + valor_venda3
+
+                document.getElementById("total").textContent = total.toFixed(2);
+            }
+
+            document.getElementById("valor_custo").addEventListener("input", atualizarTotal);
+            document.getElementById("valor_sugerido").addEventListener("input", atualizarTotal);
+            document.getElementById("valor_venda2").addEventListener("input", atualizarTotal);
+            document.getElementById("valor_venda3").addEventListener("input", atualizarTotal);
+        </script>
+
+
+<script>
+    function cadastrarTabela(){
+        
+    }
+</script>
+
+    </div>
+    
+</body>
+</html>

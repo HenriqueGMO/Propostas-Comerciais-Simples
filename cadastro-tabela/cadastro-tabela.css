@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.geral{
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+html, body {height: 100%px;}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #6E1AF2, #E2637D);
+    font-weight: bold;
+}
+.tabela{
+    border-radius: 8px;
+    border: 2px solid;
+    margin-left: 100px;
+    padding: 20px;
+    width: 450px;            
+}
+nav{
+    background: #FFFFFF;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+nav .logo{
+    color: #333;
+    float: left;
+    display: block;
+    padding: 14px 16px;
+}
+
+nav a{
+    color: #333;
+    float: right;
+    text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:hover{
+  transition: 0.5s;
+  background: linear-gradient(to left, #6E1AF2, #E2637D);
+  font-family: "Quicksand", sans-serif;
+  color: #e4e4e4
+}
+button{
+    margin-left: 140px;
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid;
+}
